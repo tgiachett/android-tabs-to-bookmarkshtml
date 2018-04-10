@@ -6,9 +6,9 @@ require.extensions['.txt'] = function (module, filename) {
 
 const source = require('./source.txt');
 
-let parsed = source.split("\r\n");
-//take out extra lines from source
-parsed = parsed.filter(x => x !== "")
+//make source.txt into array and filter out garbage
+let parsed = source.split("\r\n")
+        .filter(x => x !== "")
         .filter(x => x !== "Inspect")
         .filter(x => x !== "View less tabs…");
 
@@ -21,7 +21,7 @@ let template = `<!DOCTYPE NETSCAPE-Bookmark-file-1>
 <TITLE>Bookmarks</TITLE>
 <H1>Bookmarks</H1>
 <DL><p>
-        <DT><H3 ADD_DATE="${Date.now()}" LAST_MODIFIED="${Date.now()}">Android Bookmarks Folder</H3>
+        <DT><H3 ADD_DATE="${Date.now()}" LAST_MODIFIED="${Date.now()}">Android_Tabs_${Date.now()}</H3>
         <DL><p>\n`;
 
 //populate the template       
