@@ -8,9 +8,7 @@ const source = require('./source.txt');
 
 //make source.txt into array and filter out garbage
 let parsed = source.split("\r\n")
-        .filter(x => x !== "")
-        .filter(x => x !== "Inspect")
-        .filter(x => x !== "View less tabs…");
+        .filter(x => x !== "" && x !== "Inspect" && x !== "View less tabs…");
 
 //create the beginning of the template
 let template = `<!DOCTYPE NETSCAPE-Bookmark-file-1>
