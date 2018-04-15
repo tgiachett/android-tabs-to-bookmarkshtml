@@ -13,8 +13,6 @@ const source = require('./source.txt');
     const bookmarksFilename = process.argv[2] === "new" ? `${process.argv[3]}.html` : `andTabsBookm${simpDate}.html`
     let exist = fs.existsSync(bookmarksFilename)
 
-
-
     //make source.txt into array and filter out garbage
     const parsed = source.split("\r\n");
 
@@ -41,10 +39,8 @@ const source = require('./source.txt');
     template += `</DL>
         </DL>
         `;
-    //name the file
-
-    // create the file
-
+    
+        // create the file
     if(process.argv[2] === "overwrite" || !exist)  {
         try {fs.appendFileSync(bookmarksFilename, template, 'utf8')
             exist ? console.log(`${bookmarksFilename} Overwritten`) : console.log(`Created ${bookmarksFilename}`);
