@@ -33,9 +33,9 @@ const source = require('./source.txt');
 
     //populate the template       
     for(var i = 0; i < parsed.length; i++) {
-        if(!parsed[i].includes("http")) {
+        if(parsed[i].includes("http")) {
             template += `       
-            <DT><A HREF="${parsed[i+1]}" ADD_DATE="${curDate}" ICON=" ">${parsed[i]}</A>\n`};
+            <DT><A HREF="${parsed[i]}" ADD_DATE="${curDate}" ICON=" ">${parsed[i-1]}</A>\n`};
             
     };
     // close the template
