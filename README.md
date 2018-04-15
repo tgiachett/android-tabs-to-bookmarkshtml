@@ -9,6 +9,8 @@ Node application for converting android chrome tabs into bookmarks html file.
 * Highlight and copy everything that's shown
 * Paste into source.txt
 3. Run converter.js using node: `node converter.js`
-4. Output is a bookmarks html file called `androidTabsBookmarks[curUnixTime].html`
+4. Output is a bookmarks html file called `androidTabsBookmarks[YYY-MM-DD].html`
 5. This file is ready to import into the browser of your choice
+
+NOTE: use `node converter.js overwrite` to overwrite the bookmarks file that's already in the folder. Use `node converter.js new [newFileName]` to create a new file instead of overwriting.
 
