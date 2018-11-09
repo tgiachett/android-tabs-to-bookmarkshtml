@@ -1,10 +1,10 @@
 # android-tabs-to-bookmarkshtml
-Node application for converting android chrome tabs into bookmarks html file.
+Node application for converting android chrome tabs into bookmarks html file. Perhaps more of a workflow than an application.
 
 ## Instructions
 
 1. Create a source.txt file in the same folder as converter.js
-2. Follow instructions here: https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
+2. Follow instructions here for getting a list of open Android Chrome tabs: https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
 * Expand the list of tabs to get the full list
 * Highlight and copy everything that's shown
 * Paste into source.txt
